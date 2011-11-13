@@ -1,0 +1,18 @@
+- XBee API with multi-serial support
+
+This code is based off of the original XBee API library for Arudino.  However, that code only supported the main serial UART /Serial/, and I needed it to support the four serial lines on the Arduino Mega 2560.  Thus, this fork was created.
+
+Normally you would initialize the XBee function as such:
+
+	void setup() {
+		xbee.begin(9600);
+	}
+
+but now, you can set what serial port you want to bind the XBee to, like this
+
+	void setup() {
+		xbee.setSerial(Serial3);
+		xbee.begin(9600);
+	}
+
+Easy peasy!
